@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Evaluate a news article with Natural Language Processing</title>
+    </head>
+
+    <body>
+        <header>
+            <h2>
+                Evaluate a news article with Natural Language Processing
+            </h2>
+        </header>
+
+        <main>
+
+            <section>
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <input id="name" type="url" name="test-url" value=""  placeholder="https://www.yourTargetArticle">
+                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                </form>
+            <section>
+
+            <section class="errors">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';"></span>
+                <div id="error"></div>sss
+            </section> 
+
+            <section class="url-results">
+
+                <h3> Polarity:</h3>
+                <p id="polarity"></p>
+                <h4> Polarity Confidence: </h4>
+                <p id="polarity_confidence"></p>
+
+                <h3> Subjectivity:</h3>
+                <p id="subjectivity"></p>
+                <h4> Subjectivity Confidence: </h4>
+                <p id="subjectivity_confidence"></p>
+
+                </section>
+        </main>
+
+        <script>
+                if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js')
+                });
+            }
+        </script>
+
+    </body>
+</html>
